@@ -1155,3 +1155,345 @@ body {
         height: 45px;
     }
 }
+
+/* Industries We Serve Section */
+.industries-we-serve-section {
+    background-color: #fff; /* White background from the image */
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+/* Custom wrapper for content width and centering, replacing Bootstrap container */
+.custom-content-wrapper {
+    max-width: 1140px; /* Or a width that matches your overall site content width */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px; /* Bootstrap default container padding */
+    padding-right: 15px; /* Bootstrap default container padding */
+}
+
+.industries-badge {
+    display: inline-block;
+    color: #666; /* Grey text color */
+    font-size: 0.8rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.industries-main-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #4CAF50; /* Green color for the title */
+    margin-bottom: 3rem;
+    max-width: 600px; /* Limit width of title as seen in image */
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; /* Ensure title is centered */
+}
+
+/* New Grid Layout for Industry Cards */
+.industry-cards-grid-layout {
+    display: grid;
+    /* Two columns: first for Oil & Gas/Fintech, second for Real Estate/Infrastructure */
+    grid-template-columns: repeat(2, minmax(280px, 1fr)); /* Adjusted for two columns, min width for card */
+    gap: 20px; /* Space between cards */
+    justify-items: center; /* Center items in their grid cells */
+    align-items: center; /* Vertically align items in their grid cells */
+    width: fit-content; /* Make grid container only as wide as its content */
+    margin: 0 auto; /* Center the grid itself */
+    position: relative; /* For the shuffle transition */
+    transition: all 0.5s ease-in-out; /* Smooth transition for shuffling */
+    min-height: 200px; /* Prevents layout jump during shuffle */
+}
+
+/* Specific positioning for cards to match the image */
+.industry-cards-grid-layout > div:nth-child(even) {
+    /* Styles for Real Estate and Infrastructure (2nd and 4th cards) */
+    transform: translateX(100px); /* Adjust this value to shift them right as in the image */
+}
+
+
+.industry-card {
+    /* background-color: #f0f0f0; Light grey background for the cards */
+    border-radius: 50px; /* Pill shape */
+    padding: 10px 25px 10px 10px; /* Padding, more on the right for text */
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and name */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    width: 280px; /* Fixed width for cards */
+    flex-shrink: 0; /* Prevent shrinking when space is tight */
+}
+
+.industry-card:hover {
+    background-color: #e0e0e0; /* Slightly darker on hover */
+    transform: translateY(-3px); /* Lift effect */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.industry-icon {
+    width: 70px; /* Size of the circular image */
+    height: 70px;
+    border-radius: 50%; /* Make the image circular */
+    object-fit: cover; /* Ensure image covers the circle */
+}
+
+.industry-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #333;
+}
+
+.sector-agnostic-link {
+    color: #e11d48; /* Your brand red */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    position: relative; /* For the underline effect */
+    padding-bottom: 3px; /* Space for the underline */
+    transition: color 0.3s ease;
+}
+
+/* Underline effect for the link */
+.sector-agnostic-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #e11d48; /* Red underline */
+    transition: transform 0.3s ease-out;
+    transform-origin: left;
+    transform: scaleX(1); /* Always visible as per image */
+}
+
+.sector-agnostic-link:hover {
+    color: #4CAF50; /* Green on hover */
+}
+
+.sector-agnostic-link:hover::after {
+    background-color: #4CAF50; /* Green underline on hover */
+    transform: scaleX(1.05); /* Slightly expand on hover */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .industries-main-title {
+        font-size: 2.2rem;
+        max-width: 500px;
+    }
+    .industry-cards-grid-layout {
+        grid-template-columns: repeat(2, minmax(250px, 1fr)); /* Adjust card min-width */
+        gap: 15px;
+    }
+    .industry-cards-grid-layout > div:nth-child(even) {
+        transform: translateX(50px); /* Reduce horizontal shift on smaller screens */
+    }
+    .industry-card {
+        padding: 8px 20px 8px 8px;
+        width: 250px; /* Adjust fixed width */
+    }
+    .industry-icon {
+        width: 35px;
+        height: 35px;
+    }
+    .industry-name {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .industries-main-title {
+        font-size: 1.8rem;
+        margin-bottom: 2rem;
+    }
+    .industry-cards-grid-layout {
+        grid-template-columns: 1fr; /* Single column on small screens */
+        justify-items: center; /* Center cards */
+    }
+    .industry-cards-grid-layout > div:nth-child(even) {
+        transform: translateX(0); /* Remove horizontal shift on single column layout */
+    }
+    .industry-card {
+        width: 90%; /* Make cards nearly full width */
+        max-width: 320px; /* Max width for cards on small screens */
+        justify-content: center; /* Center content in card */
+    }
+}
+
+@media (max-width: 575.98px) {
+    .industries-badge {
+        font-size: 0.75rem;
+    }
+    .industry-main-title {
+        font-size: 1.6rem;
+    }
+}
+
+
+/* General styles for the section */
+    .contact-us-section {
+        background-color: #f7f7f7; /* Light background, consistent with other sections */
+        padding: 60px 15px; /* Reduced padding top/bottom and some side padding */
+        font-family: 'Inter', sans-serif; /* Consistent font */
+        color: #333;
+    }
+
+    /* Container for the form content */
+    .contact-container {
+        max-width: 550px; /* Reduced max width for the form */
+        margin: 0 auto; /* Center the container */
+        background-color: #ffffff; /* White background for the form card */
+        padding: 30px; /* Reduced padding */
+        border-radius: 15px; /* Rounded corners */
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Soft shadow */
+        animation: fadeIn 0.8s ease-out; /* Simple fade-in animation */
+    }
+
+    /* Title styling */
+    .contact-title {
+        font-size: 2rem; /* Reduced font size */
+        font-weight: 700;
+        color: #4CAF50; /* Green color for the title */
+        text-align: center;
+        margin-bottom: 10px; /* Reduced margin */
+    }
+
+    /* Subtitle styling */
+    .contact-subtitle {
+        font-size: 0.9rem; /* Reduced font size */
+        color: #666;
+        text-align: center;
+        margin-bottom: 30px; /* Reduced margin */
+        line-height: 1.6;
+    }
+
+    /* Form group (label + input) styling */
+    .contact-form .form-group {
+        margin-bottom: 20px; /* Reduced space between form fields */
+    }
+
+    /* Label styling */
+    .contact-form label {
+        display: block; /* Make labels take full width */
+        font-size: 0.9rem; /* Reduced font size */
+        font-weight: 600;
+        color: #333;
+        margin-bottom: 5px; /* Reduced space between label and input */
+    }
+/* Input and textarea styling */
+    .contact-form input[type="text"],
+    .contact-form input[type="email"],
+    .contact-form textarea {
+        width: 100%;
+        padding: 10px 12px; /* Reduced padding */
+        border: 1px solid #ddd; /* Light grey border */
+        border-radius: 8px; /* Rounded input fields */
+        font-size: 0.95rem; /* Slightly reduced font size */
+        color: #333;
+        background-color: #fcfcfc; /* Slightly off-white background for inputs */
+        transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    }
+
+    /* Placeholder text color */
+    .contact-form input::placeholder,
+    .contact-form textarea::placeholder {
+        color: #aaa;
+    }
+
+    /* Focus state for inputs and textarea */
+    .contact-form input:focus,
+    .contact-form textarea:focus {
+        outline: none; /* Remove default outline */
+        border-color: #4CAF50; /* Green border on focus */
+        box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.2); /* Soft green glow */
+    }
+
+    /* Textarea specific styling */
+    .contact-form textarea {
+        resize: vertical; /* Allow vertical resizing only */
+        min-height: 100px; /* Reduced minimum height for textarea */
+    }
+
+    /* Submit button styling */
+    .submit-button {
+        display: block; /* Make button take full width */
+        width: 100%;
+        padding: 12px 20px; /* Reduced padding */
+        background-color: #e11d48; /* Your brand red */
+        color: #fff;
+        border: none;
+        border-radius: 8px; /* Rounded button */
+        font-size: 1rem; /* Reduced font size */
+        font-weight: 700;
+        cursor: pointer;
+        transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transitions */
+        letter-spacing: 0.5px;
+    }
+
+    .submit-button:hover {
+        background-color: #bf1a3e; /* Darker red on hover */
+        transform: translateY(-2px); /* Slight lift effect */
+        box-shadow: 0 8px 20px rgba(225, 29, 72, 0.2); /* More prominent shadow */
+    }
+
+    .submit-button:active {
+        transform: translateY(0); /* Press down effect */
+        box-shadow: none;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .contact-us-section {
+            padding: 40px 10px; /* Further reduced padding */
+        }
+        .contact-container {
+            padding: 25px; /* Further reduced padding */
+            border-radius: 8px;
+        }
+        .contact-title {
+            font-size: 1.8rem;
+            margin-bottom: 8px;
+        }
+        .contact-subtitle {
+            font-size: 0.85rem;
+            margin-bottom: 25px;
+        }
+        .contact-form label {
+            font-size: 0.85rem;
+            margin-bottom: 4px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            padding: 8px 10px;
+            font-size: 0.9rem;
+            border-radius: 5px;
+        }
+        .submit-button {
+            padding: 10px 18px;
+            font-size: 0.95rem;
+            border-radius: 5px;
+        }
+    }
+
+    @media (max-width: 480px) {
+        .contact-container {
+            padding: 15px;
+        }
+        .contact-title {
+            font-size: 1.6rem;
+        }
+        .contact-subtitle {
+            font-size: 0.8rem;
+        }
+    }
