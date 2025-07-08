@@ -1420,6 +1420,11 @@ body {
     }
 
     /* Submit button styling */
+    .solution-image{
+        width: 100%;
+        height: auto;
+        border-radius: 20px;
+    }       
     .submit-button {
         display: block; /* Make button take full width */
         width: 100%;
@@ -1497,3 +1502,251 @@ body {
             font-size: 0.8rem;
         }
     }
+
+
+    /* Our Solutions Section */
+.our-solutions-section {
+    background-color: #f7f7f7; /* Light background, similar to other sections */
+    padding: 80px 0;
+    position: relative; /* For the background pattern */
+    overflow: hidden; /* Ensure background pattern doesn't spill */
+}
+
+/* Background dot pattern from 'show .png' */
+.our-solutions-section::before {
+    content: '';
+    position: absolute;
+    bottom: -100px; /* Position it off-screen initially */
+    right: -100px;
+    width: 300px; /* Size of the pattern area */
+    height: 300px;
+    background-image: radial-gradient(circle, #e6e6e6 1px, transparent 1px); /* Small light grey dots */
+    background-size: 10px 10px; /* Spacing of the dots */
+    opacity: 0.6; /* Slight transparency */
+    z-index: 0; /* Keep it in the background */
+    transform: rotate(45deg); /* Rotate to match the image */
+    pointer-events: none; /* Make sure it doesn't interfere with clicks */
+}
+
+
+.solutions-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #4CAF50; /* Green color for the title */
+    margin-bottom: 20px;
+}
+
+.solutions-description {
+    font-size: 1rem;
+    color: #555;
+    line-height: 1.6;
+    max-width: 800px; /* Limit width for readability */
+    margin-bottom: 50px;
+}
+
+/* Card Container for Grid Layout */
+.solutions-cards-grid {
+    /* Bootstrap's row and col classes will handle the grid */
+}
+
+/* Individual Solution Card Styling */
+.solution-card {
+    background-color: transparent; /* Inner div handles background */
+    width: 100%; /* Take full column width */
+    height: 400px; /* Fixed height for cards */
+    perspective: 1000px; /* Establish 3D perspective for the flip */
+    border-radius: 15px; /* Matches overall rounded aesthetic */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); /* Subtle initial shadow */
+    transition: box-shadow 0.3s ease; /* Smooth shadow transition */
+}
+
+.solution-card:hover {
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15); /* More prominent shadow on hover */
+}
+
+.solution-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s; /* Smooth flip animation duration */
+    transform-style: preserve-3d; /* Keep children in 3D space */
+    border-radius: 15px; /* Apply to inner as well */
+}
+
+.solution-card:hover .solution-card-inner {
+    transform: rotateY(180deg); /* Flip on hover */
+}
+
+.solution-card-front,
+.solution-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back when facing away */
+    border-radius: 15px; /* Match parent */
+    padding: 30px; /* Padding inside the card */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+    align-items: center; /* Center content horizontally */
+    box-sizing: border-box; /* Include padding in width/height */
+}
+
+.solution-card-front {
+    background-color: #fff; /* White background for front */
+    color: #333;
+    z-index: 2; /* Ensure front is on top initially */
+    transform: rotateY(0deg); /* Initial position */
+}
+
+.solution-card-back {
+    background-color: #e11d48; /* Green background for back */
+    color: #fff;
+    transform: rotateY(180deg); /* Start rotated for the back */
+    display: flex; /* Override flex properties from above for specific content alignment */
+    flex-direction: column;
+    justify-content: flex-start; /* Align text to top */
+    align-items: flex-start; /* Align text to left */
+    text-align: left;
+}
+
+/* Front content styling */
+.solution-icon-wrapper {
+    background-color: #f0f0f0; /* Light grey circle behind icon */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.solution-icon {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.solution-card-heading {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.solution-card-summary {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Back content styling */
+.solution-card-heading-back {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #fff; /* White text on green background */
+}
+
+.solution-card-detailed {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    flex-grow: 1; /* Allow content to grow and push learn more down */
+}
+
+.solution-learn-more-back {
+    color: #fff; /* White text for link */
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: inline-flex; /* Align icon and text */
+    align-items: center;
+    gap: 5px; /* Space between text and icon */
+    transition: transform 0.3s ease;
+}
+
+.solution-learn-more-back:hover {
+    transform: translateX(5px); /* Slide effect on hover */
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .solutions-title {
+        font-size: 2.2rem;
+    }
+    .solutions-description {
+        font-size: 0.95rem;
+        margin-bottom: 40px;
+    }
+    .solution-card {
+        height: 320px; /* Slightly reduced height on tablets */
+    }
+    .solution-card-front,
+    .solution-card-back {
+        padding: 25px;
+    }
+    .solution-icon-wrapper {
+        width: 70px;
+        height: 70px;
+    }
+    .solution-icon {
+        width: 35px;
+        height: 35px;
+    }
+    .solution-card-heading,
+    .solution-card-heading-back {
+        font-size: 1.3rem;
+    }
+    .solution-card-summary,
+    .solution-card-detailed {
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .our-solutions-section {
+        padding: 60px 0;
+    }
+    .solutions-title {
+        font-size: 1.8rem;
+    }
+    .solutions-description {
+        margin-bottom: 30px;
+    }
+    .solutions-cards-grid .col-md-6 {
+        flex: 0 0 80%; /* Make cards wider on small mobile screens */
+        max-width: 80%;
+    }
+    .solution-card {
+        height: 300px; /* Further reduced height on mobile */
+    }
+    .solution-card-front,
+    .solution-card-back {
+        padding: 20px;
+    }
+    .solution-icon-wrapper {
+        width: 60px;
+        height: 60px;
+        margin-bottom: 15px;
+    }
+    .solution-icon {
+        width: 30px;
+        height: 30px;
+    }
+    .solution-card-heading,
+    .solution-card-heading-back {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .solutions-cards-grid .col-md-6 { /* Targets .col-md-6 when it's also acting as col-12 */
+        flex: 0 0 95%; /* Make cards nearly full width on very small screens */
+        max-width: 95%;
+    }
+}
