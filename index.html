@@ -44,6 +44,7 @@
       <a href="#" class="btn btn-outline-primary">Services</a>
     </div>
   </section>
+
 <!-- About Section -->
 <section class="about-us-section">
     <div class="container">
@@ -51,15 +52,34 @@
             <div class="col-lg-6 d-flex align-items-center">
                 <div class="about-content">
                     <small class="our-services-title">About Us</small>   
-                    <p class="about-text">
-                        <strong>Ekenua & Co Limited</strong> is a premier corporate advisory firm
-                        dedicated to delivering high-value, strategic solutions that empower
-                        businesses to achieve their goals. With a deep commitment to
-                        excellence and a sector-agnostic approach, we provide tailored
-                        advisory services to clients across Fintech, Oil and Gas, Real
-                        Estate, and Infrastructure.
-                    </p>
-                    <a href="#" class="learn-more-link">Learn more</a>
+                    <div id="initial-about-content"> <p class="about-text">
+                            <!-- <strong>Ekenua & Co Limited</strong> is a premier corporate advisory firm
+                            dedicated to delivering high-value, strategic solutions that empower
+                            businesses to achieve their goals. With a deep commitment to
+                            excellence and a sector-agnostic approach, we provide tailored
+                            advisory services to clients across Fintech, Oil and Gas, Real
+                            Estate, and Infrastructure. -->
+
+                            At <strong>Ekenua & Co. Limited</strong>, our purpose is clear to help organizations unlock their full potential by providing strategic guidance that is insightful, actionable, and future-focused.
+We exist to bridge the gap between ambition and execution, helping our clients make bold decisions with confidence. Whether you're scaling into new markets, securing capital, or forming high-impact partnerships, we are here to be the force behind your growth journey.
+                        </p>
+                        <a href="#" class="learn-more-link" id="learn-more-btn">Learn more <i class="fas fa-arrow-right"></i></a>
+                    </div>
+
+                    <div id="paginated-content" style="display: none;"> <div id="vision-page">
+                            <h3 class="pagination-title">Our Vision</h3>
+                            <p class="pagination-text">To be the most trusted and sought-after strategic advisory firm for businesses aiming to lead in their sectors.</p>
+                        </div>
+                        <div id="mission-page" style="display: none;">
+                            <h3 class="pagination-title">Our Mission</h3>
+                            <p class="pagination-text">To empower clients with bespoke advisory solutions that drive sustainable growth, unlock partnerships, and transform industries.</p>
+                        </div>
+                        <div class="pagination-controls mt-3">
+                           <a href="#" class="learn-more-link pagination-nav-link" data-page="vision">Vision <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="learn-more-link pagination-nav-link" data-page="mission">Mission <i class="fas fa-arrow-right"></i></a>
+                            <a href="#" class="learn-more-link" id="back-to-about-btn">About Us <i class="fas fa-arrow-right"></i></a>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6 d-flex align-items-center justify-content-center text-center about-pattern-column">
@@ -80,7 +100,7 @@
         </p>
 
         <div class="solutions-cards-grid row justify-content-center g-4">
-            <!-- Solution Card 1: Consultancy Services -->
+           
             <div class="col-lg-3 col-md-6 mb-4">
                 <div class="solution-card">
                     <div class="solution-card-inner">
@@ -104,7 +124,7 @@
                 </div>
             </div>
 
-            <!-- Solution Card 2: Cyber Security -->
+            
             <div class="col-lg-3 col-md-6 mb-4">
                 <div class="solution-card">
                     <div class="solution-card-inner">
@@ -128,7 +148,7 @@
                 </div>
             </div>
 
-            <!-- Solution Card 3: Data Analytics -->
+            
             <div class="col-lg-3 col-md-6 mb-4">
                 <div class="solution-card">
                     <div class="solution-card-inner">
@@ -181,66 +201,76 @@
 </section>
 
 <!-- Our service section  -->
- <section class="our-services-section py-5">
+  <section class="our-services-section py-5">
     <div class="container">
-        <h2 class="text-center mb-5 our-services-title">Our Services</h2>
+        <h2 class="text-center mb-5 our-services-title"> Our Core Values </h2>
         <div class="row justify-content-center">
 
-            <div class="col-lg-6 col-md-6 mb-4">
-                <div class="service-card service-card-green h-100 p-4">
-                    <div class="service-icon mb-3">
+            
+
+            <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-box h-100 p-4">
+                        <div class="service-icon mb-3">
                         <img src="assets/images/1.png" alt="Strategic Advisory Icon" class="img-fluid">
                     </div>
-                    <h3 class="service-title">Strategic Advisory Services</h3>
-                    <p class="service-description">
-                        We understand that each industry has its unique challenges and opportunities. Our sector-agnostic approach allows us to provide bespoke strategic advisory services across Fintech, Oil and Gas, Real Estate, and Infrastructure. We work closely with our clients to understand their goals and develop strategies that align with their vision, ensuring long-term success.
-                    </p>
-                    <a href="#" class="learn-more-link-dark">Learn more</a>
+                        <h3 class="feature-box-title mb-3">Integrity</h3>
+                        <p class="feature-box-description mb-4">
+                           We do what is right, even when no one is watching. Trust is the foundation of every relationship we build.
+                        <a href="#" class="view-more-link d-flex align-items-center">
+                            <span class="me-2">+</span> View more
+                        </a>
+                    </div>
                 </div>
-            </div>
+           
 
-            <div class="col-lg-6 col-md-6 mb-4">
-                <div class="service-card service-card-gray h-100 p-4">
-                    <div class="service-icon mb-3">
+            <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-box h-100 p-4">
+                        <div class="service-icon mb-3">
                         <img src="assets/images/2.png" alt="Technical Partnering Icon" class="img-fluid">
                     </div>
-                    <h3 class="service-title">Technical and Joint Venture (JV) Partnering</h3>
-                    <p class="service-description">
-                        Identifying the right technical and JV partners can be crucial for the success of your projects. At Ekenua & Co Limited, we leverage our extensive network and industry expertise to help you secure the perfect partners for your specific needs. We facilitate collaborations that enhance project execution and align with your strategic goals.
-                    </p>
-                    <a href="#" class="learn-more-link-dark">Learn more</a>
+                        <h3 class="feature-box-title mb-3">Excellence</h3>
+                        <p class="feature-box-description mb-4">
+                           We go beyond good enough. Every solution we offer reflects a high standard of precision, research, and execution.
+                        </p>
+                        <a href="#" class="view-more-link d-flex align-items-center">
+                            <span class="me-2">+</span> View more
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="col-lg-6 col-md-6 mb-4">
-                <div class="service-card service-card-gray h-100 p-4">
-                    <div class="service-icon mb-3">
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-box h-100 p-4">
+                        <div class="service-icon mb-3">
                         <img src="assets/images/3.png" alt="Capital Raising Icon" class="img-fluid">
                     </div>
-                    <h3 class="service-title">Capital Raising and Investment Advisory</h3>
-                    <p class="service-description">
-                        Raising capital is a critical aspect of any business, and our team is here to guide you through the process. From the creation of a compelling Investment Memorandum to managing discussions with potential investors, we provide end-to-end support to ensure successful fundraising outcomes. Our established relationships with a group of capital providers give you access to the financial resources needed to propel your business forward.
-                    </p>
-                    <a href="#" class="learn-more-link-dark">Learn more</a>
+                        <h3 class="feature-box-title mb-3">Innovation</h3>
+                        <p class="feature-box-description mb-4">
+                           We challenge conventional thinking and leverage modern tools and models to solve today’s complex business problems.
+                        </p>
+                        <a href="#" class="view-more-link d-flex align-items-center">
+                            <span class="me-2">+</span> View more
+                        </a>
+                    </div>
                 </div>
-            </div>
 
-            <div class="col-lg-6 col-md-6 mb-4">
-                <div class="service-card service-card-gray h-100 p-4">
-                    <div class="service-icon mb-3">
+            <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="feature-box h-100 p-4">
+                        <div class="service-icon mb-3">
                         <img src="assets/images/4.png" alt="Sector Expertise Icon" class="img-fluid">
                     </div>
-                    <h3 class="service-title">Sector-Specific Expertise</h3>
-                    <p class="service-description">
-                        Our deep knowledge across multiple sectors enables us to offer specialized advisory services that address the unique needs of each industry. Whether you operate in Fintech, Oil and Gas, Real Estate, or Infrastructure, our team is equipped to deliver insights and strategies that drive growth and innovation.
-                    </p>
-                    <a href="#" class="learn-more-link-dark">Learn more</a>
+                        <h3 class="feature-box-title mb-3">Impact</h3>
+                        <p class="feature-box-description mb-4">
+                           We focus on what matters. Our strategies are built to deliver lasting value — for our clients, industries, and communities.
+                        </p>
+                        <a href="#" class="view-more-link d-flex align-items-center">
+                            <span class="me-2">+</span> View more
+                        </a>
+                    </div>
                 </div>
-            </div>
 
         </div>
     </div>
-</section>
+</section> 
 
 <section class="industries-we-serve-section py-5">
     <div class="custom-content-wrapper">
@@ -251,9 +281,13 @@
         </div>
 
         <div class="industry-cards-grid-layout" id="industryCardsContainer">
-            <div class="">
-                <img src="assets/images/oil-and-gas.jpg" alt="Oil and Gas Icon" class="industry-icon">
+            <div class="industry-card">
+                <img src="assets/images/oil-and-gas.jpg" alt="Real Estate Icon" class="industry-icon">
                 <span class="industry-name">Oil and Gas</span>
+            </div>
+            <div class="industry-card">
+                <img src="assets/images/mining.jpeg" alt="Real Estate Icon" class="industry-icon">
+                <span class="industry-name">Mining</span>
             </div>
             <div class="industry-card">
                 <img src="assets/images/real-estate.jpg" alt="Real Estate Icon" class="industry-icon">
@@ -264,8 +298,12 @@
                 <span class="industry-name">Fintech</span>
             </div>
             <div class="industry-card">
-                <img src="assets/images/infar.jpg" alt="Infrastructure Icon" class="industry-icon">
-                <span class="industry-name">Infrastructure</span>
+                <img src="assets/images/Logistics-Infras.jpg" alt="Infrastructure Icon" class="industry-icon">
+                <span class="industry-name">Logistics & Infrastructure</span>
+            </div>
+            <div class="industry-card">
+                <img src="assets/images/Renewables.jpeg" alt="Infrastructure Icon" class="industry-icon">
+                <span class="industry-name">Renewables</span>
             </div>
         </div>
 

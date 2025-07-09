@@ -263,6 +263,41 @@ body {
     transform: scaleX(1);
 }
 
+/* Add to your existing CSS file or style block */
+.pagination-title {
+    color: #FF0000; /* Example color */
+    margin-bottom: 15px;
+}
+
+.pagination-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.pagination-controls button {
+    margin-right: 10px;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination-controls .btn-primary {
+    background-color: #FF0000; 
+    color: #fff;
+    border: 1px solid #FF0000;
+}
+
+.pagination-controls .btn-secondary {
+    background-color: #6c757d;
+    color: #fff;
+    border: 1px solid #6c757d;
+}
+
+.pagination-controls .learn-more-link {
+    margin-right: 15px; 
+    display: inline-block; 
+}
+
 .about-heading {
     font-size: 3.2rem; /* Adjust as needed for responsiveness */
     font-weight: 700;
