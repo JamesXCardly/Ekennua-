@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
       font-family: 'Inter', sans-serif;
       background: #fefefe;
@@ -1785,3 +1789,110 @@ body {
         max-width: 95%;
     }
 }
+
+
+ /* Strategies Section */
+    .strategies-section {
+        background-color: #fefefe; /* White or very light background */
+        padding: 80px 0;
+        font-family: 'Inter', sans-serif;
+        color: #333;
+    }
+
+    .strategies-title {
+        font-size: 2.8rem;
+        font-weight: 700;
+        color: #4CAF50; /* Green color for the title */
+        margin-bottom: 20px;
+    }
+
+    .strategies-description {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.6;
+        max-width: 800px; /* Limit width for readability */
+        margin-bottom: 50px;
+    }
+
+    .strategies-list {
+        list-style: none; /* Remove default bullet points */
+        padding: 0;
+        margin: 0;
+    }
+
+    .strategies-list li {
+        background-color: #ffffff; /* White background for each list item */
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+        padding: 25px 30px;
+        margin-bottom: 10px; /* Space between list items */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        position: relative; /* For potential future enhancements like icons */
+        overflow: hidden; /* To contain any pseudo-elements */
+    }
+
+    .strategies-list li:last-child {
+        margin-bottom: 0; /* No margin after the last item */
+    }
+
+    .strategies-list li:hover {
+        transform: translateY(-5px); /* Slight lift on hover */
+        box-shadow: 0 8px 20px rgba(254, 55, 68, 0.1); /* More pronounced shadow */
+    }
+
+    .strategy-item-title {
+        font-size: 1.4rem;
+        font-weight: 700;
+        color: #333;
+        margin-bottom: 8px;
+    }
+
+    .strategy-item-description {
+        font-size: 0.95rem;
+        color: #666;
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 991.98px) {
+        .strategies-title {
+            font-size: 2.2rem;
+        }
+        .strategies-description {
+            font-size: 0.95rem;
+            margin-bottom: 40px;
+        }
+        .strategies-list li {
+            padding: 20px 25px;
+        }
+        .strategy-item-title {
+            font-size: 1.2rem;
+        }
+        .strategy-item-description {
+            font-size: 0.9rem;
+        }
+    }
+
+    @media (max-width: 767.98px) {
+        .strategies-section {
+            padding: 60px 0;
+        }
+        .strategies-title {
+            font-size: 1.8rem;
+        }
+        .strategies-description {
+            margin-bottom: 30px;
+            padding: 0 15px; /* Add horizontal padding for description on small screens */
+        }
+        .strategies-list li {
+            padding: 18px 20px;
+            margin-bottom: 15px;
+        }
+        .strategy-item-title {
+            font-size: 1.1rem;
+        }
+        .strategy-item-description {
+            font-size: 0.85rem;
+        }
+    }
