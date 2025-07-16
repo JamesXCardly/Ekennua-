@@ -10,143 +10,189 @@ body {
     .navbar-brand img {
       height: 40px;
     }
-    .hero {
-      position: relative;
-      background: url('assets/images/hero_mini.jpg') center/cover no-repeat;
-      color: white;
-      text-align: center;
-      padding: 10rem 2rem;
-      min-height: 80vh;
-      z-index: 1;
-    }
-       .hero::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background: rgba(0, 0, 0, 0.6);
-      z-index: -1;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      font-weight: 700;
-      margin-bottom: 1rem;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: .05em solid white;
-      width: 0;
-      animation: typing 4s steps(50, end) forwards, blink-caret .75s step-end 4s 5;
-    }
-    @keyframes typing {
-      from { width: 0 }
-      to { width: 100% }
-    }
-    @keyframes blink-caret {
-      0%, 100% { border-color: transparent }
-      50% { border-color: white; }
-    }
-    .hero p {
-      font-size: 1.1rem;
-      max-width: 600px;
-      margin: 0 auto 2rem auto;
-    }
-    .hero .btn-primary {
-      background-color: #e11d48;
-      border-color: #e11d48;
-    }
-    .hero .btn-primary:hover {
-      background-color: black;
-      border-color: #e11d48;
+   .hero {
+  position: relative;
+  background: url('assets/images/hero_mini.jpg') center/cover no-repeat;
+  color: white;
+  text-align: center;
+  padding: 10rem 2rem;
+  min-height: 80vh;
+  z-index: 1;
+}
 
-    }
-    .hero .btn-outline-primary {
-      background-color: #fefefe;
-      border-color: #fefefe;
-      color: #e11d48;
-    }
-    .hero .btn-outline-primary:hover {
-      background-color: #e11d48;
-      color: white;
-      border-color: #fefefe;
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: -1;
+}
 
-    }
-    .navbar-collapse {
-      justify-content: center;
-    }
-    .navbar-nav {
-      gap: 1.5rem;
-    }
-    .navbar-right {
-      position: absolute;
-      right: 1rem;
-    }
+.hero h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: .05em solid white;
+  width: 0;
+  animation: typing 4s steps(50, end) forwards, blink-caret .75s step-end 4s 5;
+}
 
-    /* Navbar Styling */
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent }
+  50% { border-color: white; }
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+}
+
+.hero .btn-primary {
+  background-color: #e11d48;
+  border-color: #e11d48;
+}
+
+.hero .btn-primary:hover {
+  background-color: black;
+  border-color: #e11d48;
+}
+
+.hero .btn-outline-primary {
+  background-color: #fefefe;
+  border-color: #fefefe;
+  color: #e11d48;
+}
+
+.hero .btn-outline-primary:hover {
+  background-color: #e11d48;
+  color: white;
+  border-color: #fefefe;
+}
+
+/* ✅ Responsive fix: adjust font size & allow wrapping on small screens */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 1.8rem;       /* smaller text */
+    white-space: normal;     /* allow text to wrap */
+  }
+}
+
+   /* === Navbar core styles === */
 .navbar {
-    padding-top: 15px; /* Adjust padding as needed */
-    padding-bottom: 15px; /* Adjust padding as needed */
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.9); /* semi-transparent white */
+    backdrop-filter: blur(8px); /* modern blur behind navbar */
+    position: sticky; /* stays at the top while scrolling */
+    top: 0;
+    z-index: 1030; /* stay above other content */
+    transition: background-color 0.3s ease;
+}
+
+/* Ensure sticky works well (Bootstrap already uses sticky-top) */
+.navbar.sticky-top {
+    position: sticky;
+    top: 0;
+    z-index: 1030;
 }
 
 .navbar-brand img {
     height: 40px; /* Adjust your logo height */
 }
 
+/* Navbar toggler (hamburger) styles */
+.navbar-toggler {
+    border: 2px solid #e11d48; /* brand red border */
+    border-radius: 4px;
+    padding: 6px 8px;
+    transition: border-color 0.3s ease;
+}
+
+/* Change border color on hover/focus */
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+    border-color: #bf1a3e; /* darker red */
+}
+
+/* Navbar collapse: center items */
+.navbar-collapse {
+    justify-content: center;
+}
+
+.navbar-nav {
+    gap: 1.5rem;
+}
+
+/* Contact Us button on the right */
+.navbar-right {
+    position: absolute;
+    right: 1rem;
+}
+
 /* Navbar links */
 .navbar-nav .nav-item .nav-link {
-    font-size: 1rem; /* Adjust font size as per your design */
-    font-weight: 500; /* Medium weight for nav links */
-    color: #333; /* Default link color (dark grey) */
-    text-decoration: none; /* Remove default underline */
-    position: relative; /* Essential for positioning pseudo-elements */
-    display: inline-block; /* Essential for width calculation and margin/padding */
-    padding: 8px 0; /* Add some vertical padding for space above/below underlines */
-    margin: 0 15px; /* Horizontal spacing between nav items */
-    transition: color 0.3s ease; /* Smooth color transition on hover */
+    font-size: 1rem;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    padding: 8px 0;
+    margin: 0 15px;
+    transition: color 0.3s ease;
 }
 
-/* Change color on hover */
+/* Hover effect: color */
 .navbar-nav .nav-item .nav-link:hover {
-    color: #e11d48; /* Your brand red on hover */
+    color: #e11d48; /* brand red */
 }
 
-/* Pseudo-elements for the animated lines */
+/* Underline effect using pseudo-elements */
 .navbar-nav .nav-item .nav-link::after,
 .navbar-nav .nav-item .nav-link::before {
     content: '';
     position: absolute;
     width: 100%;
-    height: 2px; /* Thickness of the underline */
-    background: linear-gradient(to right, #e11d48, #4CAF50); /* Gradient: your red to your green */
-    
-    transform: scaleX(0); /* Initially hidden */
-    transition: transform 0.4s ease-out; /* Speed of the animation */
+    height: 2px;
+    background: linear-gradient(to right, #e11d48, #4CAF50); /* red to green gradient */
+    transform: scaleX(0); /* hidden by default */
+    transition: transform 0.4s ease-out;
 }
 
 /* Bottom line */
 .navbar-nav .nav-item .nav-link::after {
-    bottom: 0; /* Place at the bottom of the link's padding box */
+    bottom: 0;
     left: 0;
-    transform-origin: right; /* Starts expanding from the right */
+    transform-origin: right;
 }
 
 /* Top line */
 .navbar-nav .nav-item .nav-link::before {
-    top: 0; /* Place at the top of the link's padding box */
+    top: 0;
     left: 0;
-    transform-origin: left; /* Starts expanding from the left */
+    transform-origin: left;
 }
 
-/* Animation on hover */
+/* Animate on hover */
 .navbar-nav .nav-item .nav-link:hover::after,
 .navbar-nav .nav-item .nav-link:hover::before {
-    transform: scaleX(1); /* Expands to full width */
+    transform: scaleX(1);
 }
 
-/* Contact Us Button in Navbar */
+/* Contact Us Button */
 .navbar-right .btn-danger {
-    background-color: #e11d48; /* Your brand red */
+    background-color: #e11d48; /* brand red */
     color: #fff;
     padding: 8px 20px;
     border-radius: 5px;
@@ -156,36 +202,33 @@ body {
 }
 
 .navbar-right .btn-danger:hover {
-    background-color: #bf1a3e; /* Darker red on hover */
+    background-color: #bf1a3e; /* darker red */
     color: #fff;
 }
 
-/* Responsive adjustments for Navbar */
-@media (max-width: 991.98px) { /* For Bootstrap's 'lg' breakpoint and below */
+/* === Responsive adjustments === */
+@media (max-width: 991.98px) {
     .navbar-nav {
-        text-align: center; /* Center nav items when collapsed */
+        text-align: center;
         margin-top: 15px;
         margin-bottom: 15px;
     }
 
     .navbar-nav .nav-item .nav-link {
-        margin: 10px 0; /* Adjust vertical margin for stacked links */
-        padding: 5px 0; /* Adjust vertical padding */
+        margin: 10px 0;
+        padding: 5px 0;
     }
 
-    /* For collapsed menu, the underline might look better if it just appears
-       or if you prefer to hide it, you can: */
+    /* Hide animated underlines in collapsed menu */
     .navbar-nav .nav-item .nav-link::after,
     .navbar-nav .nav-item .nav-link::before {
-        display: none; /* Hide animated underlines in collapsed menu */
+        display: none;
     }
 
     .navbar-toggler:focus {
-        box-shadow: none; /* Remove focus outline if desired */
+        box-shadow: none; /* optional: remove focus outline */
     }
 }
-
-
 
 
 /* About section */
@@ -1792,107 +1835,113 @@ body {
 
 
  /* Strategies Section */
-    .strategies-section {
-        background-color: #fefefe; /* White or very light background */
-        padding: 80px 0;
-        font-family: 'Inter', sans-serif;
-        color: #333;
-    }
+/* Strategies list styles */
+.strategies-list {
+    list-style: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+}
 
+.strategies-list li {
+    background-color: #ffffff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    padding: 25px 30px;
+    margin-bottom: 10px;
+    position: relative;
+    overflow: hidden;
+
+    /* Fade-in initial state */
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* Fade-in active state */
+.strategies-list li.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered delays */
+.strategies-list li:nth-child(1) {
+    transition-delay: 0s;
+}
+.strategies-list li:nth-child(2) {
+    transition-delay: 0.1s;
+}
+.strategies-list li:nth-child(3) {
+    transition-delay: 0.2s;
+}
+.strategies-list li:nth-child(4) {
+    transition-delay: 0.3s;
+}
+.strategies-list li:nth-child(5) {
+    transition-delay: 0.4s;
+}
+
+.strategies-list li:last-child {
+    margin-bottom: 0;
+}
+
+.strategies-list li:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    box-shadow: 0 8px 20px rgba(254, 55, 68, 0.1);
+}
+
+.strategy-item-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.strategy-item-description {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
     .strategies-title {
-        font-size: 2.8rem;
-        font-weight: 700;
-        color: #4CAF50; /* Green color for the title */
-        margin-bottom: 20px;
+        font-size: 2.2rem;
     }
-
     .strategies-description {
-        font-size: 1rem;
-        color: #555;
-        line-height: 1.6;
-        max-width: 800px; /* Limit width for readability */
-        margin-bottom: 50px;
-    }
-
-    .strategies-list {
-        list-style: none; /* Remove default bullet points */
-        padding: 0;
-        margin: 0;
-    }
-
-    .strategies-list li {
-        background-color: #ffffff; /* White background for each list item */
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
-        padding: 25px 30px;
-        margin-bottom: 10px; /* Space between list items */
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        position: relative; /* For potential future enhancements like icons */
-        overflow: hidden; /* To contain any pseudo-elements */
-    }
-
-    .strategies-list li:last-child {
-        margin-bottom: 0; /* No margin after the last item */
-    }
-
-    .strategies-list li:hover {
-        transform: translateY(-5px); /* Slight lift on hover */
-        box-shadow: 0 8px 20px rgba(254, 55, 68, 0.1); /* More pronounced shadow */
-    }
-
-    .strategy-item-title {
-        font-size: 1.4rem;
-        font-weight: 700;
-        color: #333;
-        margin-bottom: 8px;
-    }
-
-    .strategy-item-description {
         font-size: 0.95rem;
-        color: #666;
-        line-height: 1.6;
-        margin-bottom: 0;
+        margin-bottom: 40px;
     }
+    .strategies-list li {
+        padding: 20px 25px;
+    }
+    .strategy-item-title {
+        font-size: 1.2rem;
+    }
+    .strategy-item-description {
+        font-size: 0.9rem;
+    }
+}
 
-    /* Responsive adjustments */
-    @media (max-width: 991.98px) {
-        .strategies-title {
-            font-size: 2.2rem;
-        }
-        .strategies-description {
-            font-size: 0.95rem;
-            margin-bottom: 40px;
-        }
-        .strategies-list li {
-            padding: 20px 25px;
-        }
-        .strategy-item-title {
-            font-size: 1.2rem;
-        }
-        .strategy-item-description {
-            font-size: 0.9rem;
-        }
+@media (max-width: 767.98px) {
+    .strategies-section {
+        padding: 60px 0;
     }
-
-    @media (max-width: 767.98px) {
-        .strategies-section {
-            padding: 60px 0;
-        }
-        .strategies-title {
-            font-size: 1.8rem;
-        }
-        .strategies-description {
-            margin-bottom: 30px;
-            padding: 0 15px; /* Add horizontal padding for description on small screens */
-        }
-        .strategies-list li {
-            padding: 18px 20px;
-            margin-bottom: 15px;
-        }
-        .strategy-item-title {
-            font-size: 1.1rem;
-        }
-        .strategy-item-description {
-            font-size: 0.85rem;
-        }
+    .strategies-title {
+        font-size: 1.8rem;
     }
+    .strategies-description {
+        margin-bottom: 30px;
+        padding: 0 15px;
+    }
+    .strategies-list li {
+        padding: 18px 20px;
+        margin-bottom: 15px;
+    }
+    .strategy-item-title {
+        font-size: 1.1rem;
+    }
+    .strategy-item-description {
+        font-size: 0.85rem;
+    }
+}

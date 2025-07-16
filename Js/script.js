@@ -77,3 +77,20 @@ document.addEventListener('DOMContentLoaded', function() {
         initialAboutContent.style.display = 'block'; // Show initial content
     });
 });
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+    const items = document.querySelectorAll('.strategies-list li');
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('fade-in');
+                observer.unobserve(entry.target); // only animate once
+            }
+        });
+    }, { threshold: 0.1 });
+
+    items.forEach(item => observer.observe(item));
+});
+
