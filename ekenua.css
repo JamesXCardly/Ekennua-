@@ -1852,7 +1852,7 @@ body {
     overflow: hidden;
 
     /* Fade-in initial state */
-    opacity: 0;
+    opacity: 3;
     transform: translateY(20px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
