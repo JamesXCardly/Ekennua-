@@ -785,6 +785,8 @@ body {
     .feature-boxes-row {
         margin-top: 2rem; 
     }
+
+
 }
 
 @media (max-width: 767.98px) {
@@ -805,6 +807,18 @@ body {
     .feature-box-description {
         font-size: 0.85rem;
     }
+
+    .man{
+        margin-left: 1%;
+        position: relative;
+        top: 6%;
+    }
+
+    .woman{
+        margin-left: 1%;
+        position: relative;
+        top: 6%;
+    }
 }
 
 /* Main Footer */
@@ -816,7 +830,6 @@ body {
 
 .main-footer .footer-logo {
     height: 60px; /* Adjust logo size */
-    filter: brightness(0) invert(1); /* Makes the React logo white for dark background */
     /* If you have a colored Ekenua logo, remove this filter */
 }
 
@@ -1933,7 +1946,7 @@ body {
 }
 
 .strategies-list li {
-    background-color: #ffffff; /* White background */
+   background: linear-gradient(45deg, #ffffff, #e11d48); /* White background */
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     padding: 25px 30px;
@@ -2035,3 +2048,5 @@ body {
         font-size: 0.85rem;
     }
 }
+
+
