@@ -1417,6 +1417,96 @@ body {
 }
 
 
+  /* Custom styles for elements that need more specific control or are not directly covered by Tailwind */
+        .industries-badge {
+            color: #666; /* Grey text color */
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .our-services-title {
+            font-size: 2.8rem; /* Large font for desktop */
+            font-weight: 700;
+            color: #e11d48; /* Red color for the title, as seen in strateg.png */
+        }
+
+        /* Responsive adjustments for title font size */
+        @media (max-width: 991.98px) {
+            .our-services-title {
+                font-size: 2.2rem;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            .our-services-title {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 575.98px) {
+            .our-services-title {
+                font-size: 1.6rem;
+            }
+        }
+
+        /* Specific positioning for cards to match the desktop image layout */
+        /* This transform is applied only on larger screens (md: breakpoint and above) */
+        @media (min-width: 768px) {
+            .industry-cards-grid-layout > div:nth-child(even) {
+                transform: translateX(100px); /* Adjust this value to shift them right as in the image */
+            }
+        }
+
+        /* Hover effects for industry cards */
+        .industry-card:hover {
+            background-color: #e0e0e0; /* Slightly darker on hover */
+            transform: translateY(-3px); /* Lift effect */
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Underline effect for the link (if re-added) */
+        .sector-agnostic-link {
+            color: #e11d48; /* Your brand red */
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            position: relative;
+            padding-bottom: 3px;
+            transition: color 0.3s ease;
+        }
+
+        .sector-agnostic-link::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #e11d48;
+            transition: transform 0.3s ease-out;
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+
+        .sector-agnostic-link:hover {
+            color: #4CAF50;
+        }
+
+        .sector-agnostic-link:hover::after {
+            background-color: #4CAF50;
+            transform: scaleX(1.05);
+        }
+
+        /* Mobile-specific adjustments for industry cards */
+        /* Ensure content within the card is left-aligned on smaller screens */
+        @media (max-width: 767.98px) {
+            .industry-card {
+                justify-content: flex-start; /* Align content to the start (left) */
+                padding-left: 1rem; /* Add some padding to the left edge */
+            }
+        }
+
+
 /* General styles for the section */
     .contact-us-section {
         background-color: #f7f7f7; /* Light background, consistent with other sections */
