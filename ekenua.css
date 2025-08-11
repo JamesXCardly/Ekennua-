@@ -1946,7 +1946,7 @@ body {
 }
 
 .strategies-list li {
-   background: linear-gradient(45deg, #ffffff, #e11d48); /* White background */
+   background: #e3607d;/* White background */
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
     padding: 25px 30px;
@@ -1995,7 +1995,7 @@ body {
 .strategy-item-title {
     font-size: 1.4rem;
     font-weight: 700;
-    color: #333;
+    color: white;
     margin-bottom: 8px;
 }
 
