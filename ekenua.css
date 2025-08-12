@@ -1043,7 +1043,7 @@ body {
 
 /* Background colors for image wrappers based on the screenshot */
 .success-story-card .card-image-blue {
-    background-color: #0d1e3d; /* Dark blue background */
+    background-color: #0B2748; /* Dark blue background */
 }
 
 .success-story-card .card-image-black {
@@ -1725,7 +1725,7 @@ body {
     font-size: 1rem;
     color: #555;
     line-height: 1.6;
-    max-width: 800px; /* Limit width for readability */
+    /* max-width: 800px; Limit width for readability */
     margin-bottom: 50px;
 }
 
@@ -1946,9 +1946,9 @@ body {
 }
 
 .strategies-list li {
-   background: #e3607d;/* White background */
+   background: #990223;/* White background */
     border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    box-shadow: 0 5px 15px rgba(84, 8, 8, 0.05); /* Subtle shadow */
     padding: 25px 30px;
     margin-bottom: 10px;
     position: relative;
@@ -2001,7 +2001,7 @@ body {
 
 .strategy-item-description {
     font-size: 0.95rem;
-    color: #666;
+    color: #d2cbcb;
     line-height: 1.6;
     margin-bottom: 0;
 }
