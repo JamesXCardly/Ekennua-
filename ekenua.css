@@ -1,12 +1,12 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 body {
-      font-family: 'Inter', sans-serif;
-      background: #fefefe;
-      color: #333;
-    }
+  font-family: 'Aptos', sans-serif;
+  background: #fefefe;
+  color: #333;
+}
     .navbar-brand img {
       height: 40px;
     }
@@ -1172,11 +1172,13 @@ body {
 
 .carousel-item-logo {
     flex-shrink: 0; /* Prevent logos from shrinking too much */
-    width: 120px; /* Default width for logos */
-    height: 60px; /* Default height for logos */
+    width: 720px; /* Default width for logos */
+    height: 260px; /* Default height for logos */
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: right;
+    align-items: right;
+    margin-top: 45%;
+    
 }
 
 .carousel-item-logo img {
