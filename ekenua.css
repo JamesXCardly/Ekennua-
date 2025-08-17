@@ -395,6 +395,7 @@ body {
 
     .about-text {
         font-size: 1rem;
+        text-align: left;
     }
 }
 
@@ -1129,6 +1130,8 @@ body {
     .success-stories-card {
         margin-bottom: 1.5rem; /* Reduce margin on very small screens */
     }
+
+ 
 }
 
 /* Recognized by the Best Section */
@@ -1159,7 +1162,8 @@ body {
     font-size: 1rem;
     color: #555;
     line-height: 1.6;
-    max-width: 450px; /* Limit width for readability */
+    max-width: 450px;
+    text-align: left;
 }
 
 .logo-carousel {
@@ -1248,8 +1252,10 @@ body {
         font-size: 0.9rem;
     }
     .carousel-item-logo {
-        width: 90px; /* Even smaller logos on mobile */
-        height: 45px;
+        float: right;
+        width: 146px;
+        height: 128px;
+        margin-top: 10px;
     }
 }
 
@@ -2016,6 +2022,7 @@ body {
     .strategies-description {
         font-size: 0.95rem;
         margin-bottom: 40px;
+        text-align: left;
     }
     .strategies-list li {
         padding: 20px 25px;
@@ -2035,9 +2042,10 @@ body {
     .strategies-title {
         font-size: 1.8rem;
     }
-    .strategies-description {
+    .strategies-description {   
         margin-bottom: 30px;
         padding: 0 15px;
+        text-align: left;
     }
     .strategies-list li {
         padding: 18px 20px;
