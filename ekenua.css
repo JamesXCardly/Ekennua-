@@ -1057,7 +1057,7 @@ body {
 
 
 .success-story-card .card-image-wrapper img {
-    max-height: 100px; /* Max height for client logos */
+    max-height: 122px; /* Max height for client logos */
     width: auto;
     object-fit: contain; /* Ensure image scales correctly */
 }
